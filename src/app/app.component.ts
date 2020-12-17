@@ -26,11 +26,21 @@ export class AppComponent {
   }
 
   addToCart(product: Product) {
-      
+      console.log('my product',product)
+      this.cart.items.push({id:product.id,item:product.name,quantity:1})
+      let index = this.products.findIndex((data)=>data.id === product.id)
+      this.products[index].cartQuantity = 1;
   }
 
   updateCart(product: Product) {
-      
+    console.log(product,this.cart.items)
+    if(product.cartQuantity > 0){
+    let index= this.cart.items.findIndex((item)=>item.id === product.id);
+    this.cart.items[index].quantity = product.cartQuantity;
+    }
+    else{
+      this.cart.items = this.cart.items.filter((item)=>item.id != product.id)
+    }
   }
 }
 
