@@ -1,0 +1,9 @@
+<div class="layout-row shop-component">
+    <app-product-list [products]="products"
+                      (onAddToCart)="addToCart($event)"
+                      (onQuantityUpdate)="updateCart($event)"
+                      class="flex-70"></app-product-list>
+    <app-cart class="flex-30"
+              [cart]="cart"></app-cart>
+           
+  </div>

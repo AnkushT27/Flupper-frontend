@@ -1,0 +1,13 @@
+<div class="card ma-16">
+    <img src="../../assets/images/fluper.png" style="width:max-content"  class="product-image"/>
+    <div class="card-text pa-4">
+      <h5 class="ma-0 text-center">Hello , {{profileData?.name}}</h5>
+      <p class="ma-0 mt-8 text-center">Email: {{profileData?.email}}</p>
+    </div>
+    <div class="card-actions justify-content-center pa-4">
+      <button class="x-small outlined" data-test-id="btn-item-add" (click)="addToCart(product)" *ngIf="product.cartQuantity == 0">
+        Add To Cart
+      </button>
+
+    </div>
+  </div>

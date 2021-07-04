@@ -1,12 +1,31 @@
+<!--Navbar-->
+<mdb-navbar SideClass="navbar navbar-expand-lg navbar-dark indigo">
 
-<h8k-navbar header="Hacker Shop"></h8k-navbar>
+  <!-- Navbar brand -->
+  <mdb-navbar-brand><a class="navbar-brand" href="#">
+    <img src="../assets/images/fluper.png">
+  </a></mdb-navbar-brand>
 
-<div class="layout-row shop-component">
-  <app-product-list [products]="products"
-                    (onAddToCart)="addToCart($event)"
-                    (onQuantityUpdate)="updateCart($event)"
-                    class="flex-70"></app-product-list>
-  <app-cart class="flex-30"
-            [cart]="cart"></app-cart>
-</div>
+  <!-- Collapsible content -->
+  <links>
 
+      <!-- Links -->
+      <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+              <a class="nav-link waves-light" mdbWavesEffect [routerLink]="'/profile'">Profile<span class="sr-only">(current)</span></a>
+          </li>
+         
+
+        
+
+      </ul>
+      <!-- Links -->
+</links>
+
+
+</mdb-navbar>
+<!--/.Navbar-->
+
+
+
+<router-outlet></router-outlet>
